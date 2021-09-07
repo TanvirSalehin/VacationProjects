@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JSPlayGround</title>
+	</head>
+	<body>
+		<div>
+			<script type="text/javascript">
+				var name = "Tanvir";
+				document.write(name + "<br />");
+				if (name == "Tanvir") {
+					document.write("Hi Tanvir! <br />");
+				}
+				else if (name == "Toha") {
+					document.write("Hello Toha! <br />");
+				}	
+				else {
+					document.write("Hello! <br />");
+				}
+
+				/*-----------------------------------------------------------------------------------------------*/
+
+				var year = 2021;
+				switch (year) {
+					case 2020:
+						document.write("Previous Year <br />");
+					break;
+					case 2021:
+						document.write("This Year <br />");
+					break;
+					case 2022:
+						document.write("Next Year <br />");
+					break;
+					default:
+						document.write("Another Year <br />");
+				}
+				document.write("<br />");
+
+				/*----------------------------------------------------------------------------------------------------*/
+
+				var num = 1;
+				for (; num <= 10 ; num ++) {
+					document.write(num + "<br />");
+				}
+
+				document.write("<br />");
+
+				var num_2 = 12;
+				while (num_2 < 21) {
+					document.write(num_2 + "<br />");
+					num_2 += 2;
+				}
+
+				document.write("<br />");
+
+				var num_3 = 25;
+				var increase = 11;
+				do {
+					document.write(num_3 + "<br />");
+					num_3 += increase;
+					increase += 2;
+				}
+				while (num_3 <= 200);
+				document.write("<br />");
+
+				/*        BREAK & CONTINUE         */
+
+				/*-----------------------------------------------------------------------------------------------------*/
+
+				function hello(name , age) {
+					document.write("Hi, " + name + "! Are you " + age + "?" + "<br />");
+				}
+
+				hello("Toha" , "11");
+				hello("Tanvir" , "15");
+
+				document.write("<br />")
+				
+				/*-------------------------------------------------------------------------------------------------------*/
+
+				/* alert("Hello Toha!");
+				var prompt = prompt("Please enter your name: ");
+				var confirm = confirm("Do you really want to leave?");*/
+
+				/*---------------------------------------------------------------------------------------------------------*/
+
+				var Toha = {
+					name : "Toha" , age : "11" , grade : "6th" , gender : "Male" , religion : "Islam" , nationality : "Bangladeshi" , birthDate : "2nd October , 2009"
+				};
+
+				var name_of_Toha = Toha.name;
+				var age_of_Toha = Toha['age'];
+				var letters_in_Toha = Toha.name.length;
+
+				document.write(name_of_Toha + "<br />");
+				document.write(age_of_Toha + "<br />");
+				document.write(letters_in_Toha + "<br />");
+				document.write("<br />");
+
+
+				function personalInfo(name , age , grade , gender) {
+					this.name = name;
+					this.age = age;
+					this.grade = grade;
+					this.gender = gender;
+					this.changeName = function (name) {
+						this.name = name;
+					};
+				};
+
+				var Tanvir = new personalInfo("Tanvir" , 15 , "9th" , "Male");
+				var Tanzil = new personalInfo("Tanzil" , 14 , "8th" , "Male");
+
+				document.write(Tanvir.name + "<br />");
+				document.write(Tanzil.grade + "<br />");
+				document.write("<br />");
+				document.write("----------------------------------------------------------------");
+				document.write("<br />");
+
+				/*var inputName = window.prompt("Please enter your name: ");
+				var inputAge = window.prompt("Please enter your age: ");
+				//var inputGrade = window.prompt("Please enter your class: ");
+				//var inputGender = window.prompt("Please enter your gender: ");
+
+				var John = new personalInfo(inputName , inputAge);
+				document.write(John.name + "<br />");
+
+				var willYouChangeName = window.confirm("Would you like to change your name?");
+				if (willYouChangeName == true) {
+					var changedName = window.prompt("What is your new name? ");
+					John.changeName(changedName);
+					document.write("Your name is " + John.name + "<br />");
+				}
+				else {
+					alert("Okkay, thank you for your valuable time.");
+				}*/
+
+				document.write("<br />");
+
+				/*-----------------------------------------------------------------------------------------*/
+
+				var youTubers_BD = ["Triple_R" , "Kabbo" , "GW_Dreamer"];
+				document.write(youTubers_BD[2] + "<br />"); //GW_Dreamer
+
+				youTubers_BD[1] = "Talha"; //Changes value of 2nd element of the youTubers_BD array to Talha from Kabbo
+				document.write(youTubers_BD[1] + "<br />"); // Talha
+
+				document.write(youTubers_BD.length + "<br />"); //3
+
+				var youTubers_Indian = ["AjjuBhai" , "Amitbhai" , "UG_Gamer" , "Pankaj"];
+
+				var youTubers_FF = youTubers_BD.concat(youTubers_Indian); //Adds both arrays and makes a new array named youtubers_FF having 7 elements total. NOTE: It does not effect previous arrays.
+
+				document.write(youTubers_FF[5] + "<br />");
+				document.write(youTubers_FF.length + "<br />");
+
+				document.write("<br />");
+
+				/*-------------------------------------------------------------------------------------------------*/
+
+				/*function alertHi() {
+					alert("HI!");
+				};
+
+				setInterval(alertHi , 10000);*/
+
+
+				/*function PrintCurrentTime() {
+					var d = new date();
+					var hours = d.getHours();
+					var mins = d.getMinutes();
+					var secs = d.getSeconds();
+					document.body.innerHTML = hours + ":" + mins ":" + secs;
+				};
+				setInterval(PrintCurrentTime , 1000)*/   //This prints time every second.. but won't work with other codes (maybe).
+
+
+
+			</script>
+		</div>
+	</body>
+</html>
